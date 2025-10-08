@@ -49,3 +49,11 @@ export async function getRecipe(req, res) {
     return httpResponse(500, error.message, null, res);
   }
 }
+export async function getRecipes(req, res) {
+  return httpResponse(200, 'Recipes Found', {
+    recipes: [
+      { id: 1, title: 'Recipe 1' },
+      { id: 2, title: 'Recipe 2' },
+    ],
+  }, res);
+}
